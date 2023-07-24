@@ -1,8 +1,8 @@
 <!-- items.component.html -->
 
 <div class="container mx-auto py-8">
-  <h2 class="text-2xl font-bold mb-4">Lista de Inventario</h2>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Borrar Inventario</button>
+  <h2  class="text-2xl font-bold mb-4">Lista de Inventario</h2>
+  <button *ngIf="borrarInventarioActivo$|async" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Borrar Inventario</button>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
     <div *ngFor="let item of items" class="bg-white rounded-lg shadow-md p-4">
       <img src="{{ item.imageURL }}" alt="{{ item.name }}" class="w-full h-40 object-cover rounded-t-lg">
